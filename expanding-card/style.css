@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.container {
+  margin: auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 60vh;
+}
+
+.panel {
+  margin-left: 10px;
+  border-radius: 50px;
+  width: 100px;
+  height: 100%;
+  max-width: 800px;
+  background-position: center;
+  position: relative;
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  opacity: 0;
+}
+
+.panel:hover {
+  cursor: pointer;
+}
+
+.panel:first-child {
+  margin: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
